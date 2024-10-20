@@ -1,6 +1,6 @@
 import { FiguraGeometrica } from "./figura-geometrica"
 
-export abstract class Circulo extends FiguraGeometrica{
+export class Circulo extends FiguraGeometrica{
 
     radio: number;
 

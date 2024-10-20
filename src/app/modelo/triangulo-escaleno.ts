@@ -1,6 +1,6 @@
 import { FiguraGeometrica } from "./figura-geometrica";
 
-export abstract class TrianguloEscaleno extends FiguraGeometrica{
+export class TrianguloEscaleno extends FiguraGeometrica{
 
     ladoA: number;
     ladoB: number;
