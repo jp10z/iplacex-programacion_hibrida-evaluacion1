@@ -4,13 +4,14 @@ import {
   IonList, IonItem, IonInput, IonCard, IonCardHeader, IonCardTitle,
   IonCardSubtitle, IonCardContent, IonButton, IonImg } from '@ionic/angular/standalone';
 import { TrianguloEscaleno } from '../../modelo/triangulo-escaleno';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-triangulo',
   templateUrl: './triangulo.component.html',
   styleUrls: ['./triangulo.component.scss'],
   standalone: true,
-  imports: [IonImg, IonButton, 
+  imports: [CommonModule, IonImg, IonButton, 
     ReactiveFormsModule, IonList, IonItem, IonInput,
     IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard
   ]
@@ -21,7 +22,7 @@ export class TrianguloComponent  implements OnInit {
 
   ngOnInit() {}
 
-  textoResultado: string = "";
+  textoResultado: string | null = null;
 
   formulario = new FormGroup({
     ladoA: new FormControl(0, [Validators.required]),

@@ -4,13 +4,14 @@ import {
   IonList, IonItem, IonInput, IonCard, IonCardHeader, IonCardTitle,
   IonCardSubtitle, IonCardContent, IonButton, IonImg } from '@ionic/angular/standalone';
 import { Circulo } from '../../modelo/circulo';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-circulo',
   templateUrl: './circulo.component.html',
   styleUrls: ['./circulo.component.scss'],
   standalone: true,
-  imports: [IonImg, IonButton, 
+  imports: [CommonModule, IonImg, IonButton, 
     ReactiveFormsModule, IonList, IonItem, IonInput,
     IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard
   ]
@@ -21,7 +22,7 @@ export class CirculoComponent  implements OnInit {
 
   ngOnInit() {}
 
-  textoResultado: string = "";
+  textoResultado: string | null = null;
 
   formulario = new FormGroup({
     radio: new FormControl(0, [Validators.required, Validators.min(0)])

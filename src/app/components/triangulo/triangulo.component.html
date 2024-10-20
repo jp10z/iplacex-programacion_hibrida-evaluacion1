@@ -27,6 +27,6 @@
       </ion-list>
     </form>
     <ion-button (click)="calcularPerimetro()">Calcular perímetro</ion-button>
-    <p style="margin-top: 16px;">{{textoResultado}}</p>
+    <p *ngIf="textoResultado !== null" style="margin-top: 16px;">{{textoResultado}}</p>
   </ion-card-content>
 </ion-card>
