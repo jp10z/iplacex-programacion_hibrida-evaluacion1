@@ -13,7 +13,7 @@ export class Circulo extends FiguraGeometrica{
 
     override calcularPerimetro(): number {
         // se calcula multiplicando 2 x Pi x radio
-        return 2 * Math.PI * this.radio;
+        return  2 * Math.PI * this.radio;
     }
 
 }

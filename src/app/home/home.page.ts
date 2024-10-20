@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent,
-  IonSelect, IonSelectOption 
-} from '@ionic/angular/standalone';
+  IonSelect, IonSelectOption, IonCard, IonCardContent } from '@ionic/angular/standalone';
 import { TrianguloComponent } from "../triangulo/triangulo.component";
 import { CirculoComponent } from "../circulo/circulo.component";
 
@@ -12,7 +11,7 @@ import { CirculoComponent } from "../circulo/circulo.component";
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonCardContent, IonCard, 
     CommonModule,
     IonHeader, IonToolbar, IonTitle, IonContent,
     IonSelect, IonSelectOption,

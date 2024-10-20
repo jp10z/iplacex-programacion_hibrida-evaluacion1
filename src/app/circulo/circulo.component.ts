@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {
   IonList, IonItem, IonInput, IonCard, IonCardHeader, IonCardTitle,
-  IonCardSubtitle, IonCardContent, IonButton } from '@ionic/angular/standalone';
+  IonCardSubtitle, IonCardContent, IonButton, IonImg } from '@ionic/angular/standalone';
 import { Circulo } from '../modelo/circulo';
 
 @Component({
@@ -10,7 +10,7 @@ import { Circulo } from '../modelo/circulo';
   templateUrl: './circulo.component.html',
   styleUrls: ['./circulo.component.scss'],
   standalone: true,
-  imports: [IonButton, 
+  imports: [IonImg, IonButton, 
     ReactiveFormsModule, IonList, IonItem, IonInput,
     IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard
   ]
@@ -39,7 +39,8 @@ export class CirculoComponent  implements OnInit {
     }
     // instanciamos circulo y procesamos el calculo
     const circulo = new Circulo(this.radio);
-    this.textoResultado = `El perímetro es ${circulo.calcularPerimetro()}`
+    const perimetroResultado = circulo.calcularPerimetro().toFixed(2);
+    this.textoResultado = `El perímetro es ${perimetroResultado} cm`
   }
 
 }

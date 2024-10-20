@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {
   IonList, IonItem, IonInput, IonCard, IonCardHeader, IonCardTitle,
-  IonCardSubtitle, IonCardContent, IonButton } from '@ionic/angular/standalone';
+  IonCardSubtitle, IonCardContent, IonButton, IonImg } from '@ionic/angular/standalone';
 import { TrianguloEscaleno } from '../modelo/triangulo-escaleno';
 
 @Component({
@@ -10,7 +10,7 @@ import { TrianguloEscaleno } from '../modelo/triangulo-escaleno';
   templateUrl: './triangulo.component.html',
   styleUrls: ['./triangulo.component.scss'],
   standalone: true,
-  imports: [IonButton, 
+  imports: [IonImg, IonButton, 
     ReactiveFormsModule, IonList, IonItem, IonInput,
     IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard
   ]
@@ -49,7 +49,8 @@ export class TrianguloComponent  implements OnInit {
     }
     // instanciamos circulo y procesamos el calculo
     const triangulo = new TrianguloEscaleno(this.ladoA, this.ladoB, this.ladoC);
-    this.textoResultado = `El perímetro es ${triangulo.calcularPerimetro()}`
+    const perimetroResultado = triangulo.calcularPerimetro().toFixed(2);
+    this.textoResultado = `El perímetro es ${perimetroResultado} cm`
   }
 
 }
