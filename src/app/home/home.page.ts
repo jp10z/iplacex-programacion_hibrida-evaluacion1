@@ -26,12 +26,12 @@ export class HomePage {
 
   esCirculo(): boolean {
     // retorna si la figura seleccionada es circulo
-    return this.figuraGeometrica == "circulo";
+    return this.figuraGeometrica === "circulo";
   }
 
   esTriangulo(): boolean {
     // retorna si la figura seleccionada es triangulo
-    return this.figuraGeometrica == "triangulo";
+    return this.figuraGeometrica === "triangulo";
   }
 
   handleFiguraGeometricaChange(event:any){
