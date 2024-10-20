@@ -13,10 +13,21 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <ion-select label="Figura geométrica" placeholder="Favorite Fruit">
+    <ion-select
+      label="Figura geométrica"
+      placeholder="Seleccione una figura figura geométrica"
+      (ionChange)="handleFiguraGeometricaChange($event)"
+    >
       <ion-select-option value="circulo">Círculo</ion-select-option>
       <ion-select-option value="triangulo">Triángulo</ion-select-option>
     </ion-select>
-  </div>
+
+    <app-circulo *ngIf="esCirculo()">
+
+    </app-circulo>
+
+    <app-triangulo *ngIf="esTriangulo()">
+
+    </app-triangulo>
+
 </ion-content>
