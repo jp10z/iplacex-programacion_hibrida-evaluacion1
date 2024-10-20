@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import {
   IonList, IonItem, IonInput, IonCard, IonCardHeader, IonCardTitle,
   IonCardSubtitle, IonCardContent, IonButton, IonImg } from '@ionic/angular/standalone';
-import { TrianguloEscaleno } from '../modelo/triangulo-escaleno';
+import { TrianguloEscaleno } from '../../modelo/triangulo-escaleno';
 
 @Component({
   selector: 'app-triangulo',

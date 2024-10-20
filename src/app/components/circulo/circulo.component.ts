@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import {
   IonList, IonItem, IonInput, IonCard, IonCardHeader, IonCardTitle,
   IonCardSubtitle, IonCardContent, IonButton, IonImg } from '@ionic/angular/standalone';
-import { Circulo } from '../modelo/circulo';
+import { Circulo } from '../../modelo/circulo';
 
 @Component({
   selector: 'app-circulo',

@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent,
   IonSelect, IonSelectOption, IonCard, IonCardContent } from '@ionic/angular/standalone';
-import { TrianguloComponent } from "../triangulo/triangulo.component";
-import { CirculoComponent } from "../circulo/circulo.component";
+import { TrianguloComponent } from "../components/triangulo/triangulo.component";
+import { CirculoComponent } from "../components/circulo/circulo.component";
 
 @Component({
   selector: 'app-home',
