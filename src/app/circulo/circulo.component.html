@@ -7,9 +7,11 @@
     <form [formGroup]="formulario">
       <ion-list>
         <ion-item>
-          <ion-input label="Radio" labelPlacement="floating" formControlName="radio" />
+          <ion-input label="Radio (cm)" labelPlacement="floating" type="number" formControlName="radio" />
         </ion-item>
       </ion-list>
     </form>
+    <ion-button (click)="calcularPerimetro()">Calcular perímetro</ion-button>
+    <p style="margin-top: 16px;">{{textoResultado}}</p>
   </ion-card-content>
 </ion-card>

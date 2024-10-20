@@ -7,15 +7,17 @@
     <form [formGroup]="formulario">
       <ion-list>
         <ion-item>
-          <ion-input label="Lado A" labelPlacement="floating" formControlName="ladoA" />
+          <ion-input label="Lado A (cm)" labelPlacement="floating" type="number" formControlName="ladoA" />
         </ion-item>
         <ion-item>
-          <ion-input label="Lado B" labelPlacement="floating" formControlName="ladoB" />
+          <ion-input label="Lado B (cm)" labelPlacement="floating" type="number" formControlName="ladoB" />
         </ion-item>
         <ion-item>
-          <ion-input label="Lado C" labelPlacement="floating" formControlName="ladoC" />
+          <ion-input label="Lado C (cm)" labelPlacement="floating" type="number" formControlName="ladoC" />
         </ion-item>
       </ion-list>
     </form>
+    <ion-button (click)="calcularPerimetro()">Calcular perímetro</ion-button>
+    <p style="margin-top: 16px;">{{textoResultado}}</p>
   </ion-card-content>
 </ion-card>
