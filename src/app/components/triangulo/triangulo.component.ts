@@ -24,6 +24,7 @@ export class TrianguloComponent  implements OnInit {
 
   textoResultado: string | null = null;
 
+  // formulario reactivo
   formulario = new FormGroup({
     ladoA: new FormControl(0, [Validators.required]),
     ladoB: new FormControl(0, [Validators.required]),
@@ -31,14 +32,17 @@ export class TrianguloComponent  implements OnInit {
   })
 
   get ladoA() {
+    // retorna el valor de ladoA del formulario, si no tiene valor retorna 0
     return this.formulario.get("ladoA")?.value ?? 0;
   }
 
   get ladoB() {
+    // retorna el valor de ladoB del formulario, si no tiene valor retorna 0
     return this.formulario.get("ladoB")?.value ?? 0;
   }
 
   get ladoC() {
+    // retorna el valor de ladoC del formulario, si no tiene valor retorna 0
     return this.formulario.get("ladoC")?.value ?? 0;
   }
 

@@ -24,11 +24,13 @@ export class CirculoComponent  implements OnInit {
 
   textoResultado: string | null = null;
 
+  // formulario reactivo
   formulario = new FormGroup({
     radio: new FormControl(0, [Validators.required, Validators.min(0)])
   })
 
   get radio() {
+    // retorna el valor de radio del formulario, si no tiene valor retorna 0
     return this.formulario.get("radio")?.value ?? 0;
   }
 
